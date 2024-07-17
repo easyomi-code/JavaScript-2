@@ -19,7 +19,6 @@ console.log(BMIJohn);
 let markHigherBMI = BMIMark > BMIJohn;
 console.log(markHigherBMI);
 */
-// -----------------------------------------------------
 
 // ------------ # Challenge-1(solution) # --------------
 // const massMark = 78;
