@@ -131,4 +131,26 @@ console.log(ageEunyomi, ageKangin, averageAge);
 */
 // ------------ # Challenge-1 # --------------
 
-// 5-3. Strings and Template Literals
+// 6. Strings and Template Literals (문자열과 템플릿 리터럴)
+const firstName = 'Eunyomi';
+const job = 'programmer';
+const birthYear = 1999;
+const year = 2024;
+
+const eunyomi = '내 이름은 ' + firstName + '이고, ' + '직업은 ' + job + ' 입니다. ' + 
+  '나이는 ' + (year - birthYear) + '살 입니다.';
+console.log(eunyomi);
+
+const eunyomiNew = `내 이름은 ${firstName}이고, 직업은 ${job} 입니다. 나이는 ${
+  year - birthYear}살 입니다.`;
+console.log(eunyomiNew);
+
+console.log(`Just a regular string...`);
+
+console.log('String with \n\
+multiple \n\
+lines');
+
+console.log(`String
+multiple
+lines`);
