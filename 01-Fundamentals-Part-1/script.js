@@ -79,10 +79,9 @@ console.log(lastName);
 
 // -----------------------------------------
 
-*/
-// 5. Basic Operators (연산자)
+// 5-1. Basic Operators (연산자)
 // Math Operators(산술 연산자)
-const now = 2037;
+const now = 2024;
 const ageEunyomi = now - 1999;
 const ageKangin = now - 2001;
 console.log(ageEunyomi, ageKangin);
@@ -108,4 +107,24 @@ console.log(ageKangin >= 20);
 
 const isFullAge = ageKangin >= 20;
 
-console.log(now - 1991 > now - 2018);
+console.log(now - 1991 > now - 2001);
+
+// -----------------------------------------
+
+*/
+// 5-2. Operator Precedence (연산자 우선순위)
+const now = 2024;
+const ageEunyomi = now - 1999;
+const ageKangin = now - 2001;
+
+console.log(now - 1991 > now - 2001);
+// 연산자 우선순위에 의해 (-)가 (>)보다 먼저 수행된다.
+
+console.log(25 - 10 - 5); // 10
+
+let x, y;
+x = y = 25 - 10 - 5; // x = y = 10, x = 10
+console.log(x, y);
+
+const averageAge = (ageEunyomi + ageKangin) / 2;
+console.log(ageEunyomi, ageKangin, averageAge);
