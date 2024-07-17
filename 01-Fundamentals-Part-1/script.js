@@ -75,8 +75,37 @@ job = 'teacher';
 lastName = 'Lee';
 console.log(lastName);
 
-// ※ 항상 변수를 적절이 선언하는 것이 중요하다!
+// ※ 항상 변수를 적절히 선언하는 것이 중요하다!
 
 // -----------------------------------------
 
 */
+// 5. Basic Operators (연산자)
+// Math Operators(산술 연산자)
+const now = 2037;
+const ageEunyomi = now - 1999;
+const ageKangin = now - 2001;
+console.log(ageEunyomi, ageKangin);
+
+console.log(ageEunyomi * 2, ageEunyomi / 10, 2 ** 3);
+// 2 ** 3 => 2 * 2 * 2
+
+const firstName = 'EunYomi';
+const lastName = 'Lee';
+console.log(firstName + ' ' + lastName);
+
+// Assignment Operators(대입 연산자)
+let x = 10 + 5; // 15
+x += 10; // x = x + 10 = 25
+x *= 4; // x = x * 4 = 100
+x++; // x = x + 1 = 101
+x--; // x = x - 1 = 100
+console.log(x);
+
+// Comparison Operators(비교 연산자)
+console.log(ageEunyomi > ageKangin); // >, <, >=, <=
+console.log(ageKangin >= 20);
+
+const isFullAge = ageKangin >= 20;
+
+console.log(now - 1991 > now - 2018);
