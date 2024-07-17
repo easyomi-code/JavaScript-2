@@ -111,7 +111,6 @@ console.log(now - 1991 > now - 2001);
 
 // -----------------------------------------
 
-*/
 // 5-2. Operator Precedence (연산자 우선순위)
 const now = 2024;
 const ageEunyomi = now - 1999;
@@ -128,3 +127,8 @@ console.log(x, y);
 
 const averageAge = (ageEunyomi + ageKangin) / 2;
 console.log(ageEunyomi, ageKangin, averageAge);
+
+*/
+// ------------ # Challenge-1 # --------------
+
+// 5-3. Strings and Template Literals
