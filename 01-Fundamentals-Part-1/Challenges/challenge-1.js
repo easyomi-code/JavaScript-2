@@ -1,4 +1,4 @@
-// ------------ # Challenge-1 # --------------
+// ----------------- # Challenge-1 # -------------------
 /*
 // let massMark = 78;
 // let heightMark = 1.69;
@@ -19,6 +19,7 @@ console.log(BMIJohn);
 let markHigherBMI = BMIMark > BMIJohn;
 console.log(markHigherBMI);
 */
+// -----------------------------------------------------
 
 // ------------ # Challenge-1(solution) # --------------
 // const massMark = 78;
