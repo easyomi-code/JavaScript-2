@@ -154,7 +154,6 @@ console.log(`String
 multiple
 lines`);
 
-*/
 // -----------------------------------------
 
 // 7. Taking Decisions: if / else Statements (if-else 문)
@@ -177,3 +176,32 @@ if(birthYear <= 2000) {
   century = 21;
 }
 console.log(century);
+*/
+
+// ------------ # Challenge-2 # --------------
+
+// 8. Type Conversion and Coercion (형변환 및 강제 변환)
+// type conversion
+const inputYear = '1999';
+console.log(Number(inputYear), inputYear);
+// Number(): 문자열 → 숫자
+console.log(Number(inputYear) + 18);
+
+console.log(Number('Eunyomi'));
+console.log(typeof NaN);
+
+console.log(String(23), 23);
+
+// type coercion
+console.log('나는 ' + 25 + '살 입니다.')
+console.log('25' - '10' - 5);
+
+console.log('25' + '2');
+console.log('25' - '2');
+console.log('25' * '2');
+console.log('25' / '2');
+
+// 출력 알아맞히기
+let n = '1' + 1; // '11'
+n = n - 1; // 10
+console.log(n);
