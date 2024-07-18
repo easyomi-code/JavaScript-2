@@ -160,7 +160,7 @@ lines`);
 // 운전면허 취득 가능 확인 프로그램
 const age = 15;
 
-if(age >= 18) {
+if (age >= 18) {
   console.log('당신은 운전면허를 취득할 수 있습니다🚗');
 } else {
   const yearsLeft = 18 - age;
@@ -170,7 +170,7 @@ if(age >= 18) {
 const birthYear = 2024;
 
 let century;
-if(birthYear <= 2000) {
+if (birthYear <= 2000) {
   century = 20;
 } else {
   century = 21;
@@ -204,9 +204,9 @@ console.log('25' / '2');
 let n = '1' + 1; // '11'
 n = n - 1; // 10
 console.log(n);
-*/
 
 // -----------------------------------------
+
 // 9. Truthy and Falsy Values
 // 5 falsy valuse: 0, '', undefined, null, NaN
 
@@ -217,15 +217,40 @@ console.log(Boolean({}));
 console.log(Boolean(''));
 
 const money  = 5000;
-if(money) {
+if (money) {
   console.log("Don't spend it all!");
 } else {
   console.log('You should get a job!');
 }
 
 let height = 0;
-if(height) {
+if (height) {
   console.log('YAY! Height is defined');
 } else {
   console.log('Height is undefined');
 }
+*/
+
+// -----------------------------------------
+// 10. Equality Operators: ==(이중 등호) vs ===(삼중 등호)-
+const age = '18';
+if (age === 18) console.log('당신은 이제 막 어른이 되었네요 :D (strict)');
+if (age == 18) console.log('당신은 이제 막 어른이 되었네요 :D (loose)');
+// == 를 사용하면 코드에 버그를 찾기 힘들다.
+
+// 웹 페이지에서 값을 얻는 방법: prompt()
+const favorite = Number(prompt("가장 좋아하는 숫자는 무엇인가요?"));
+console.log(favorite);
+console.log(typeof favorite);
+
+if (favorite === 123) {
+  console.log('WoW! 123은 정말 놀라운 숫자야!');
+} else if (favorite === 7) {
+  console.log('7은 행운의 숫자야 Lucky~!');
+} else if (favorite === 1004) {
+  console.log('천사같은 숫자를 좋아하는 구나!');
+} else {
+  console.log(`좋아하는 숫자: ${favorite}`);
+}
+
+if(favorite !== 123) console.log('이건 숫자 123이 아니야!');
