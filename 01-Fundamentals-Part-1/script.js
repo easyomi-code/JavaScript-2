@@ -128,7 +128,6 @@ console.log(x, y);
 const averageAge = (ageEunyomi + ageKangin) / 2;
 console.log(ageEunyomi, ageKangin, averageAge);
 
-*/
 // ------------ # Challenge-1 # --------------
 
 // 6. Strings and Template Literals (문자열과 템플릿 리터럴)
@@ -154,3 +153,27 @@ lines');
 console.log(`String
 multiple
 lines`);
+
+*/
+// -----------------------------------------
+
+// 7. Taking Decisions: if / else Statements (if-else 문)
+// 운전면허 취득 가능 확인 프로그램
+const age = 15;
+
+if(age >= 18) {
+  console.log('당신은 운전면허를 취득할 수 있습니다🚗');
+} else {
+  const yearsLeft = 18 - age;
+  console.log(`당신은 너무 어려서 ${yearsLeft}년 후에 운전면허를 취득할 수 있습니다😂`)
+}
+
+const birthYear = 2024;
+
+let century;
+if(birthYear <= 2000) {
+  century = 20;
+} else {
+  century = 21;
+}
+console.log(century);
