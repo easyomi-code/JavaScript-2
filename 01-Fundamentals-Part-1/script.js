@@ -229,9 +229,9 @@ if (height) {
 } else {
   console.log('Height is undefined');
 }
-*/
 
 // -----------------------------------------
+
 // 10. Equality Operators: ==(이중 등호) vs ===(삼중 등호)-
 const age = '18';
 if (age === 18) console.log('당신은 이제 막 어른이 되었네요 :D (strict)');
@@ -254,3 +254,31 @@ if (favorite === 123) {
 }
 
 if(favorite !== 123) console.log('이건 숫자 123이 아니야!');
+*/
+
+// -----------------------------------------
+// 11. Boolean Logic(Just Example)
+// 12. Logical Operators
+const hasDriversLicense = true; // A
+const hasGoodVision = true;  // B
+
+console.log(hasDriversLicense && hasGoodVision);
+console.log(hasDriversLicense || hasGoodVision);
+console.log(!hasDriversLicense);
+
+// const shouldDrive = hasDriversLicense && hasGoodVision;
+
+// if (hasDriversLicense && hasGoodVision) {
+//   console.log('Eunyomi는 운전할 수 있다!');
+// } else {
+//   console.log('다른 누군가가 운전을 해야 한다..');
+// }
+
+const isTired = false; // C
+console.log(hasDriversLicense && hasGoodVision && isTired);
+
+if (hasDriversLicense && hasGoodVision && !isTired) {
+  console.log('Eunyomi는 운전할 수 있다!');
+} else {
+  console.log('다른 누군가가 운전을 해야 한다..');
+}
