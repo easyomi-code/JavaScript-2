@@ -258,7 +258,7 @@ if(favorite !== 123) console.log('이건 숫자 123이 아니야!');
 // -----------------------------------------
 
 // 11. Boolean Logic(Just Example)
-// 12. Logical Operators
+// 12. Logical Operators(논리 연산자)
 const hasDriversLicense = true; // A
 const hasGoodVision = true;  // B
 
@@ -282,10 +282,10 @@ if (hasDriversLicense && hasGoodVision && !isTired) {
 } else {
   console.log('다른 누군가가 운전을 해야 한다..');
 }
-*/
 
 // ------------ # Challenge-3 # --------------
-// 13. The switch Statement
+
+// 13. The switch Statement (Switch문)
 const day = 'monday';
 
 switch (day) {
@@ -326,3 +326,18 @@ if (day === 'monday') {
 } else {
   console.log('유효한 값이 아닙니다❌');
 }
+*/
+// -----------------------------------------
+// 14. Statements and Expressions (문장과 표현식)
+// Statements -> 프로그램이 수행할 동작을 지시하는 코드 한 줄(;)
+// Expressions -> 값을 계산하는 코드 조각
+3 + 4;
+1991;
+true && false && !false;
+
+if (23 > 10) {
+  const str = '23 is bigger'; // Expression Statement
+}
+
+const me = 'Eunyomi';
+console.log(`나 ${me}는 ${2024 - 1999}살 입니다.`);
