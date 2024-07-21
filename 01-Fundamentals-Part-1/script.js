@@ -326,8 +326,9 @@ if (day === 'monday') {
 } else {
   console.log('유효한 값이 아닙니다❌');
 }
-*/
+
 // -----------------------------------------
+
 // 14. Statements and Expressions (문장과 표현식)
 // Statements -> 프로그램이 수행할 동작을 지시하는 코드 한 줄(;)
 // Expressions -> 값을 계산하는 코드 조각
@@ -341,3 +342,23 @@ if (23 > 10) {
 
 const me = 'Eunyomi';
 console.log(`나 ${me}는 ${2024 - 1999}살 입니다.`);
+*/
+// -----------------------------------------
+// 15. The Conditional (Ternary) Operator (삼항 연산자)
+const age = 25;
+age >= 18
+  ? console.log('나는 와인을 좋아한다 🍷')
+  : console.log('나는 물을 좋아한다 💧');
+
+const drink = age >= 18 ? '와인 🍷' : '물 💧';
+console.log(drink);
+
+let drink2;
+if (age >= 18) {
+  drink2 = '와인 🍷';
+} else {
+  drink2 = '물 💧';
+}
+console.log(drink2);
+
+console.log(`나는 ${age >= 18 ? '와인' : '물'}을 좋아한다!`);
