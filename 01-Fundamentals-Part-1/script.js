@@ -254,9 +254,9 @@ if (favorite === 123) {
 }
 
 if(favorite !== 123) console.log('이건 숫자 123이 아니야!');
-*/
 
 // -----------------------------------------
+
 // 11. Boolean Logic(Just Example)
 // 12. Logical Operators
 const hasDriversLicense = true; // A
@@ -281,4 +281,48 @@ if (hasDriversLicense && hasGoodVision && !isTired) {
   console.log('Eunyomi는 운전할 수 있다!');
 } else {
   console.log('다른 누군가가 운전을 해야 한다..');
+}
+*/
+
+// ------------ # Challenge-3 # --------------
+// 13. The switch Statement
+const day = 'monday';
+
+switch (day) {
+  case 'monday': // day === 'monday'
+    console.log('JavasScript 공부!');
+    console.log('Tistory 블로그 정리');
+    break;
+  case 'tuesday':
+    console.log('헬스 가기');
+    break;
+  case 'wednesday':
+  case 'thursday':
+    console.log('알고리즘 문제 풀기');
+    break;
+  case 'friday':
+    console.log('자격증 공부');
+    break;
+  case 'saturday':
+  case 'sunday':
+    console.log('얏호 주말이다~ 드라마 보기~!');
+    break;
+  default:
+    console.log('유효한 값이 아닙니다❌');
+}
+
+// if-else 문으로 작성
+if (day === 'monday') {
+  console.log('JavasScript 공부!');
+  console.log('Tistory 블로그 정리');
+} else if (day === 'tuesday') {
+  console.log('헬스 가기');
+} else if (day === 'wednesday' || day === 'thursday') {
+  console.log('알고리즘 문제 풀기');
+} else if (day === 'friday') {
+  console.log('자격증 공부');
+} else if (day === 'saturday' || day === 'sunday') {
+  console.log('얏호 주말이다~ 드라마 보기~!');
+} else {
+  console.log('유효한 값이 아닙니다❌');
 }
