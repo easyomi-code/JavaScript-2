@@ -342,8 +342,9 @@ if (23 > 10) {
 
 const me = 'Eunyomi';
 console.log(`나 ${me}는 ${2024 - 1999}살 입니다.`);
-*/
+
 // -----------------------------------------
+
 // 15. The Conditional (Ternary) Operator (삼항 연산자)
 const age = 25;
 age >= 18
@@ -362,3 +363,6 @@ if (age >= 18) {
 console.log(drink2);
 
 console.log(`나는 ${age >= 18 ? '와인' : '물'}을 좋아한다!`);
+*/
+
+// ------------ # Challenge-4 # --------------
