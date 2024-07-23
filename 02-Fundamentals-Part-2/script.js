@@ -53,7 +53,7 @@ const calcAge2 = function (birthYear) {
 const age2 = calcAge2(1999);
 
 console.log(age1, age2);
-*/
+
 // -----------------------------------------
 
 // 4. Arrow Functions(화살표 함수)
@@ -69,3 +69,21 @@ const yearsUntilRetirement = (birthYear, firstName) => {
 };
 console.log(yearsUntilRetirement(1999, 'Eunyomi'));
 console.log(yearsUntilRetirement(1989, 'Sungkyu'));
+*/
+// -----------------------------------------
+
+// 5. Functions Calling Other Functions (다른 함수를 호출하는 함수)
+// cutFruitPieces(): 과일 조각내기
+function cutFruitPieces(fruit) {
+  return fruit * 4;
+}
+
+// fruitProcessor(): 과일 처리기
+function fruitProcessor(apples, oranges) {
+  const applePieces = cutFruitPieces(apples);
+  const orangePieces = cutFruitPieces(oranges);
+
+  const juice = `사과: ${applePieces}조각, 오렌지: ${orangePieces}조각`;
+  return juice;
+}
+console.log(fruitProcessor(2, 3));
