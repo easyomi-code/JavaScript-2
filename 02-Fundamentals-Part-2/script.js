@@ -35,7 +35,7 @@ const appleOrangeJuice = fruitProcessor(2, 3);
 console.log(appleOrangeJuice);
 
 const num = Number('25');
-*/
+
 // -----------------------------------------
 
 // 3. Function Declarations vs Expressions (함수 선언 vs 함수 표현식)
@@ -53,3 +53,19 @@ const calcAge2 = function (birthYear) {
 const age2 = calcAge2(1999);
 
 console.log(age1, age2);
+*/
+// -----------------------------------------
+
+// 4. Arrow Functions(화살표 함수)
+const calcAge3 = (birthYear) => 2024 - birthYear;
+const age3 = calcAge3(1999);
+console.log(age3);
+
+const yearsUntilRetirement = (birthYear, firstName) => {
+  const age = 2024 - birthYear;
+  const retirement = 65 - age;
+  // return retirement;
+  return `${firstName}의 은퇴는 ${retirement}년 남았습니다.`;
+};
+console.log(yearsUntilRetirement(1999, 'Eunyomi'));
+console.log(yearsUntilRetirement(1989, 'Sungkyu'));
