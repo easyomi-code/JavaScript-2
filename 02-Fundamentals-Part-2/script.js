@@ -69,7 +69,6 @@ const yearsUntilRetirement = (birthYear, firstName) => {
 };
 console.log(yearsUntilRetirement(1999, 'Eunyomi'));
 console.log(yearsUntilRetirement(1989, 'Sungkyu'));
-*/
 // -----------------------------------------
 
 // 5. Functions Calling Other Functions (다른 함수를 호출하는 함수)
@@ -87,3 +86,26 @@ function fruitProcessor(apples, oranges) {
   return juice;
 }
 console.log(fruitProcessor(2, 3));
+*/
+// -----------------------------------------
+
+// Reviewing Functions (함수 복습)
+const calcAge = function (birthYear) {
+  return 2024 - birthYear;
+};
+
+const yearsUntilRetirement = (birthYear, firstName) => {
+  const age = calcAge(birthYear);
+  const retirement = 65 - age;
+
+  if (retirement > 0) {
+    console.log(`${firstName}의 은퇴는 ${retirement}년 남았습니다.`);
+    return retirement;
+  } else {
+    console.log(`${firstName}은(는) 이미 은퇴 했습니다.`);
+    return -1;
+  }
+};
+
+console.log(yearsUntilRetirement(1999, 'Eunyomi'));
+console.log(yearsUntilRetirement(1950, 'Sungkyu'));
