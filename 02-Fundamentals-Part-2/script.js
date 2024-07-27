@@ -86,7 +86,7 @@ function fruitProcessor(apples, oranges) {
   return juice;
 }
 console.log(fruitProcessor(2, 3));
-*/
+
 // -----------------------------------------
 
 // Reviewing Functions (함수 복습)
@@ -109,3 +109,51 @@ const yearsUntilRetirement = (birthYear, firstName) => {
 
 console.log(yearsUntilRetirement(1999, 'Eunyomi'));
 console.log(yearsUntilRetirement(1950, 'Sungkyu'));
+*/
+// -----------------------------------------
+
+// ------------ # Challenge-1 # --------------
+// 6. Introduction to Arrays (배열)
+// 배열 -> 데이터 구조
+const friend1 = '이강인';
+const friend2 = '손흥민';
+const friend3 = '김민재';
+
+const friends = ['이강인', '손흥민', '김민재'];
+console.log(friends);
+
+const year = new Array(2001, 1992, 1996, 1999);
+
+console.log(friends[0]);
+console.log(friends[2]);
+
+console.log(friends.length);
+console.log(friends[friends.length - 1]);
+
+friends[2] = '배준호';
+console.log(friends);
+console.log(friends[2]);
+// friends = ['황희찬', '조규성', '설영우'];
+
+const firstName = 'Eunyomi';
+const eunyomi = [firstName, 'Lee', 2024 - 1999, 'Programmer', friends];
+console.log(eunyomi);
+console.log(eunyomi.length);
+
+// Exercise
+const calcAge = function (birthYear) {
+  return 2024 - birthYear;
+};
+const years = [1990, 1993, 1999, 2001, 2003];
+
+const age1 = calcAge(years[0]);
+const age2 = calcAge(years[1]);
+const age3 = calcAge(years[years.length - 1]);
+console.log(age1, age2, age3);
+
+const ages = [
+  calcAge(years[0]),
+  calcAge(years[1]),
+  calcAge(years[years.length - 1]),
+];
+console.log(ages);
