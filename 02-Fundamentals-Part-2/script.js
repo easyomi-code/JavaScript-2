@@ -109,10 +109,9 @@ const yearsUntilRetirement = (birthYear, firstName) => {
 
 console.log(yearsUntilRetirement(1999, 'Eunyomi'));
 console.log(yearsUntilRetirement(1950, 'Sungkyu'));
-*/
-// -----------------------------------------
 
 // ------------ # Challenge-1 # --------------
+
 // 6. Introduction to Arrays (배열)
 // 배열 -> 데이터 구조
 const friend1 = '이강인';
@@ -157,3 +156,37 @@ const ages = [
   calcAge(years[years.length - 1]),
 ];
 console.log(ages);
+*/
+// -----------------------------------------
+
+// 7. Basic Array Operations(Methods) - 기본 배열 연산(메서드)
+// Add elements (배열 요소 추가)
+const friends = ['이강인', '손흥민', '김민재'];
+const newLength = friends.push('배준호');
+console.log(friends);
+console.log(newLength);
+
+friends.unshift('설영우');
+console.log(friends);
+
+// Remove elements (배열 요소 제거)
+const popped = friends.pop(); // Last
+console.log(popped);
+console.log(friends);
+
+friends.shift(); // first
+console.log(friends);
+
+console.log(friends.indexOf('이강인'));
+console.log(friends.indexOf('손흥민'));
+console.log(friends.indexOf('김민재'));
+
+friends.push(25);
+console.log(friends.includes('이강인'));
+console.log(friends.includes('배준호'));
+console.log(friends.includes('25'));
+console.log(friends.includes(25)); // strict(===)
+
+if (friends.includes('손흥민')) {
+  console.log('너는 손흥민 이라는 친구가 있다.');
+}
