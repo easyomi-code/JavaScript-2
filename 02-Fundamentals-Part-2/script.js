@@ -156,7 +156,7 @@ const ages = [
   calcAge(years[years.length - 1]),
 ];
 console.log(ages);
-*/
+
 // -----------------------------------------
 
 // 7. Basic Array Operations(Methods) - 기본 배열 연산(메서드)
@@ -190,3 +190,20 @@ console.log(friends.includes(25)); // strict(===)
 if (friends.includes('손흥민')) {
   console.log('너는 손흥민 이라는 친구가 있다.');
 }
+*/
+// ------------ # Challenge-2 # --------------
+
+// 8. Introduction to Objects (객체)
+const yomiArray = [
+  'Eunyomi',
+  2024 - 1999,
+  'Programmer',
+  ['이강인', '손흥민', '황희찬'],
+];
+
+const eunyomi = {
+  firstName: 'Eunyomi',
+  age: 2024 - 1999,
+  job: 'Programmer',
+  friends: ['이강인', '손흥민', '황희찬'],
+};
