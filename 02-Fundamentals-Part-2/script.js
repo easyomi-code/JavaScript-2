@@ -190,7 +190,7 @@ console.log(friends.includes(25)); // strict(===)
 if (friends.includes('손흥민')) {
   console.log('너는 손흥민 이라는 친구가 있다.');
 }
-*/
+
 // ------------ # Challenge-2 # --------------
 
 // 8. Introduction to Objects (객체)
@@ -207,3 +207,62 @@ const eunyomi = {
   job: 'Programmer',
   friends: ['이강인', '손흥민', '황희찬'],
 };
+*/
+// -----------------------------------------
+
+// 9. Dot vs. Bracket Notation (점 표기법 vs. 대괄호 표기법)
+const yomiArray = [
+  'Eunyomi',
+  'Lee',
+  2024 - 1999,
+  'Programmer',
+  ['이강인', '손흥민', '황희찬'],
+];
+console.log(yomiArray);
+
+const eunyomi = {
+  firstName: 'Eunyomi',
+  lastName: 'Lee',
+  age: 2024 - 1999,
+  job: 'Programmer',
+  friends: ['이강인', '손흥민', '황희찬'],
+};
+console.log(eunyomi);
+
+// Dot Notation
+console.log(eunyomi.firstName);
+console.log(eunyomi.friends);
+
+// Bracket Notation
+console.log(eunyomi['firstName']);
+console.log(eunyomi['friends']);
+
+const nameKey = 'Name';
+console.log(eunyomi['first' + nameKey]);
+console.log(eunyomi['last' + nameKey]);
+
+const interestedIn = prompt(
+  'Eunyomi에 대해 알고 싶은 것은? (💁🏻‍♂️: firstName, lastName, age, job, friends)'
+);
+
+if (eunyomi[interestedIn]) {
+  console.log(eunyomi[interestedIn]);
+} else {
+  console.log(
+    '잘못된 접근입니다.(Choose: firstName, lastName, age, job, friends)'
+  );
+}
+
+eunyomi.location = 'South Korea';
+eunyomi['tistory'] = 'easyomi-code';
+console.log(eunyomi);
+
+// Challenge
+// "Eunyomi는 3명의 친구가 있고, 그 중 친한 친구는 이강인이다." 출력
+console.log(eunyomi.firstName);
+console.log(eunyomi.friends.length);
+console.log(eunyomi.friends[0]);
+
+console.log(
+  `${eunyomi.firstName}는 ${eunyomi.friends.length}명의 친구가 있고, 그 중 친한 친구는 ${eunyomi.friends[0]}이다.`
+);
