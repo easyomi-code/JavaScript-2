@@ -207,7 +207,7 @@ const eunyomi = {
   job: 'Programmer',
   friends: ['이강인', '손흥민', '황희찬'],
 };
-*/
+
 // -----------------------------------------
 
 // 9. Dot vs. Bracket Notation (점 표기법 vs. 대괄호 표기법)
@@ -266,3 +266,57 @@ console.log(eunyomi.friends[0]);
 console.log(
   `${eunyomi.firstName}는 ${eunyomi.friends.length}명의 친구가 있고, 그 중 친한 친구는 ${eunyomi.friends[0]}이다.`
 );
+*/
+// -----------------------------------------
+
+// 10. Object Methods
+const eunyomi = {
+  firstName: 'Eunyomi',
+  lastName: 'Lee',
+  birthYear: 1999,
+  job: 'Programmer',
+  friends: ['이강인', '손흥민', '황희찬'],
+  hasDriversLicense: true,
+
+  // calcAge: function (birthYear) {
+  //   return 2024 - birthYear;
+  // }
+
+  // calcAge: function () {
+  //   // console.log(this);
+  //   return 2024 - this.birthYear;
+  // }
+
+  calcAge: function () {
+    this.age = 2024 - this.birthYear;
+    return this.age;
+  },
+
+  // getSummary: function () {
+  //   if (this.hasDriversLicense) {
+  //     return `${this.firstName}는 ${this.age}살이고, 직업은 ${this.job}이다. 그리고 그녀는 운전면허가 있다.`;
+  //   } else {
+  //     return `${this.firstName}는 ${this.age}살이고, 직업은 ${this.job}이다. 그리고 그녀는 운전면허가 없다.`;
+  //   }
+
+  getSummary: function () {
+    return `${this.firstName}는 ${this.age}살이고, 직업은 ${
+      this.job
+    }이다. 그리고 그녀는 운전면허가 ${
+      this.hasDriversLicense ? '있다' : '없다'
+    }.`;
+  },
+};
+// console.log(eunyomi.calcAge(1999));
+// console.log(eunyomi['calcAge'](1999));
+
+console.log(eunyomi.calcAge());
+
+console.log(eunyomi.age);
+console.log(eunyomi.age);
+console.log(eunyomi.age);
+
+// Challenge
+// getSummary() : eunyomi에 대한 데이터를 요약하는 문자열 반환
+// 출력 예: "Eunyomi는 25살이고, 직업은 Programmer이다. 그리고 그녀는 운전면허가 있다."
+console.log(eunyomi.getSummary());
