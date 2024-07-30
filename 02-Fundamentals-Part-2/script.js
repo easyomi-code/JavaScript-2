@@ -266,7 +266,7 @@ console.log(eunyomi.friends[0]);
 console.log(
   `${eunyomi.firstName}는 ${eunyomi.friends.length}명의 친구가 있고, 그 중 친한 친구는 ${eunyomi.friends[0]}이다.`
 );
-*/
+
 // -----------------------------------------
 
 // 10. Object Methods
@@ -320,3 +320,22 @@ console.log(eunyomi.age);
 // getSummary() : eunyomi에 대한 데이터를 요약하는 문자열 반환
 // 출력 예: "Eunyomi는 25살이고, 직업은 Programmer이다. 그리고 그녀는 운전면허가 있다."
 console.log(eunyomi.getSummary());
+*/
+// ------------ # Challenge-3 # --------------
+
+// 11. Iteration: The for Loop
+// console.log('My hobby is playing soccer 1 ⚽🏃🏻‍♂️');
+// console.log('My hobby is playing soccer 2 ⚽🏃🏻‍♂️');
+// console.log('My hobby is playing soccer 3 ⚽🏃🏻‍♂️');
+// console.log('My hobby is playing soccer 4 ⚽🏃🏻‍♂️');
+// console.log('My hobby is playing soccer 5 ⚽🏃🏻‍♂️');
+// console.log('My hobby is playing soccer 6 ⚽🏃🏻‍♂️');
+// console.log('My hobby is playing soccer 7 ⚽🏃🏻‍♂️');
+// console.log('My hobby is playing soccer 8 ⚽🏃🏻‍♂️');
+// console.log('My hobby is playing soccer 9 ⚽🏃🏻‍♂️');
+// console.log('My hobby is playing soccer 10 ⚽🏃🏻‍♂️');
+
+// for loop는 조건이 참인 동안에 계속 실행
+for (let rep = 1; rep <= 10; rep++) {
+  console.log(`My hobby is playing soccer ${rep} ⚽🏃🏻‍♂️`);
+}
