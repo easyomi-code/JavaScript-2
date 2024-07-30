@@ -320,7 +320,7 @@ console.log(eunyomi.age);
 // getSummary() : eunyomi에 대한 데이터를 요약하는 문자열 반환
 // 출력 예: "Eunyomi는 25살이고, 직업은 Programmer이다. 그리고 그녀는 운전면허가 있다."
 console.log(eunyomi.getSummary());
-*/
+
 // ------------ # Challenge-3 # --------------
 
 // 11. Iteration: The for Loop
@@ -338,4 +338,55 @@ console.log(eunyomi.getSummary());
 // for loop는 조건이 참인 동안에 계속 실행
 for (let rep = 1; rep <= 10; rep++) {
   console.log(`My hobby is playing soccer ${rep} ⚽🏃🏻‍♂️`);
+}
+*/
+// -----------------------------------------
+
+// 12. Looping Arrays, Breaking and Continuing
+const yomiArray = [
+  'Eunyomi',
+  2024 - 1999,
+  'Programmer',
+  ['이강인', '손흥민', '황희찬'],
+  true,
+];
+const types = [];
+
+// console.log(yomiArray[0]);
+// console.log(yomiArray[1]);
+// console.log(yomiArray[2]);
+// console.log(yomiArray[3]);
+
+for (let i = 0; i <= yomiArray.length - 1; i++) {
+  // Reading from yomiArray
+  console.log(yomiArray[i], typeof yomiArray[i]);
+
+  // Filling types array
+  // types[i] = typeof yomiArray[i];
+  types.push(typeof yomiArray[i]);
+}
+console.log(types);
+
+const years = [1999, 2002, 2010, 1989];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+  // ages[i] = 2024 - years[i];
+  ages.push(2024 - years[i]);
+}
+console.log(ages);
+
+// continue and break
+console.log('---- 1. Continue ----');
+for (let i = 0; i <= yomiArray.length - 1; i++) {
+  if (typeof yomiArray[i] !== 'string') continue;
+
+  console.log(yomiArray[i], typeof yomiArray[i]);
+}
+
+console.log('---- 2. Break ----');
+for (let i = 0; i <= yomiArray.length - 1; i++) {
+  if (typeof yomiArray[i] === 'object') break;
+
+  console.log(yomiArray[i], typeof yomiArray[i]);
 }
