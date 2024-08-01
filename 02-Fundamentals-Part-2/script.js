@@ -339,7 +339,7 @@ console.log(eunyomi.getSummary());
 for (let rep = 1; rep <= 10; rep++) {
   console.log(`My hobby is playing soccer ${rep} ⚽🏃🏻‍♂️`);
 }
-*/
+
 // -----------------------------------------
 
 // 12. Looping Arrays, Breaking and Continuing
@@ -389,4 +389,31 @@ for (let i = 0; i <= yomiArray.length - 1; i++) {
   if (typeof yomiArray[i] === 'object') break;
 
   console.log(yomiArray[i], typeof yomiArray[i]);
+}
+*/
+// -----------------------------------------
+
+// 13. Looping Backwards and Loops in Loops
+const yomiArray = [
+  'Eunyomi',
+  2024 - 1999,
+  'Programmer',
+  ['이강인', '손흥민', '황희찬'],
+];
+
+// 0, 1, ..., 3
+for (let i = 0; i <= yomiArray.length - 1; i++) {
+  console.log(i, yomiArray[i]);
+}
+// 3, 2, ..., 0
+for (let i = yomiArray.length - 1; i >= 0; i--) {
+  console.log(i, yomiArray[i]);
+}
+
+for (let exercise = 1; exercise < 4; exercise++) {
+  console.log(`--------- Start exercise ${exercise} ---------`);
+
+  for (let rep = 1; rep < 6; rep++) {
+    console.log(`Today exercise ${exercise} is Basketball ${rep} 🏀`);
+  }
 }
