@@ -390,7 +390,7 @@ for (let i = 0; i <= yomiArray.length - 1; i++) {
 
   console.log(yomiArray[i], typeof yomiArray[i]);
 }
-*/
+
 // -----------------------------------------
 
 // 13. Looping Backwards and Loops in Loops
@@ -417,3 +417,31 @@ for (let exercise = 1; exercise < 4; exercise++) {
     console.log(`Today exercise ${exercise} is Basketball ${rep} 🏀`);
   }
 }
+*/
+// -----------------------------------------
+
+// 14. The while Loop (while 문)
+// for (let rep = 1; rep <= 10; rep++) {
+//   console.log(`My hobby is playing soccer ${rep} ⚽🏃🏻‍♂️`);
+// }
+
+console.log(`---------- (While 문) ----------`);
+let rep = 1;
+while (rep <= 10) {
+  console.log(`My hobby is playing soccer ${rep} ⚽🏃🏻‍♂️`);
+  rep++;
+}
+
+// 주사위의 숫자가 6이 나올 때까지 계속 실행
+// dice: 1 ~ 6 랜덤 숫자 생성
+let dice = Math.trunc(Math.random() * 6) + 1;
+// console.log(dice);
+
+while (dice !== 6) {
+  console.log(`주사위 번호: ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+  // if (dice === 6) console.log(`주사위 종료: ${dice}`);
+}
+console.log(`주사위 종료: ${dice}`);
+
+// ◉ while 문: counter 없는 루프, 반복 횟수가 정확하지 않을 때 사용
