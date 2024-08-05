@@ -417,7 +417,7 @@ for (let exercise = 1; exercise < 4; exercise++) {
     console.log(`Today exercise ${exercise} is Basketball ${rep} 🏀`);
   }
 }
-*/
+
 // -----------------------------------------
 
 // 14. The while Loop (while 문)
@@ -445,3 +445,6 @@ while (dice !== 6) {
 console.log(`주사위 종료: ${dice}`);
 
 // ◉ while 문: counter 없는 루프, 반복 횟수가 정확하지 않을 때 사용
+*/
+
+// ------------ # Challenge-4 # --------------
