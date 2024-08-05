@@ -5,7 +5,8 @@ const x = '23';
 
 const calcAge = birthYear => 2024 - birthYear;
 console.log(calcAge(1999));
-*/
+
+// -----------------------------------------
 
 // 1. Using Google, StackOverflow and MDN (도구 이용 - Google, StackOverflow, MDN)
 
@@ -38,8 +39,8 @@ const temperatures = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
 // 🔎 Stack overflow: https://stackoverflow.com/questions/1669190/find-the-min-max-element-of-an-array-in-javascript
 
 const calcTempAmplitude = function (temps) {
-  let max = temps[0];
-  let min = temps[0];
+  let max = 0
+  let min = 0
 
   for (let i = 0; i < temps.length; i++) {
     const curTemp = temps[i];
@@ -68,12 +69,12 @@ console.log(amplitude);
 // 🔎 Google: javascript merge two arrays
 // 🔎 MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
 
-const calcTempAmplitudeNew = function (t1, t2) {
+const calcTempAmplitudeBug = function (t1, t2) {
   const temps = t1.concat(t2);
   console.log(temps);
 
-  let max = temps[0];
-  let min = temps[0];
+  let max = 0
+  let min = 0
 
   for (let i = 0; i < temps.length; i++) {
     const curTemp = temps[i];
@@ -85,5 +86,53 @@ const calcTempAmplitudeNew = function (t1, t2) {
   console.log(max, min);
   return max - min;
 };
-const amplitudeNew = calcTempAmplitudeNew([2, 3, 9, 6], [7, 3, 5]);
-console.log(amplitudeNew);
+const amplitudeBug = calcTempAmplitudeBug([2, 3, 9, 6], [7, 3, 5]);
+console.log(amplitudeBug);
+*/
+// -----------------------------------------
+
+// 2. Debugging with the Console and Breakpoints (Console 및 Breakpoints를 활용한 디버깅)
+const measureKelvin = function () {
+  const measurement = {
+    type: 'temp',
+    unit: 'celsius',
+
+    // C) FIX
+    // value: Number(prompt('섭씨온도(°C):')),
+    value: 10,
+  };
+
+  // B) FIND
+  console.table(measurement);
+
+  // console.log(measureKelvin.value);
+  // console.warn(measureKelvin.value);
+  // console.error(measureKelvin.value);
+
+  const kelvin = measurement.value + 273;
+  return kelvin;
+};
+// A) IDENTIFY
+console.log(measureKelvin());
+
+// Using a debugger (디버거 사용)
+const calcTempAmplitudeBug = function (t1, t2) {
+  const temps = t1.concat(t2);
+  console.log(temps);
+
+  let max = 0;
+  let min = 0;
+
+  for (let i = 0; i < temps.length; i++) {
+    const curTemp = temps[i];
+    if (typeof curTemp !== 'number') continue;
+
+    if (temps[i] > max) max = curTemp;
+    if (temps[i] < min) min = curTemp;
+  }
+  console.log(max, min);
+  return max - min;
+};
+const amplitudeBug = calcTempAmplitudeBug([2, 3, 9, 6], [7, 3, 5]);
+// A) IDENTIFY
+console.log(amplitudeBug);
