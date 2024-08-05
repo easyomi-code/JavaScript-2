@@ -88,7 +88,7 @@ const calcTempAmplitudeBug = function (t1, t2) {
 };
 const amplitudeBug = calcTempAmplitudeBug([2, 3, 9, 6], [7, 3, 5]);
 console.log(amplitudeBug);
-*/
+
 // -----------------------------------------
 
 // 2. Debugging with the Console and Breakpoints (Console 및 Breakpoints를 활용한 디버깅)
@@ -136,3 +136,42 @@ const calcTempAmplitudeBug = function (t1, t2) {
 const amplitudeBug = calcTempAmplitudeBug([2, 3, 9, 6], [7, 3, 5]);
 // A) IDENTIFY
 console.log(amplitudeBug);
+*/
+// -----------------------------------------
+
+// Coding Challenge #1
+/*
+예측된 최고 온도의 배열이 주어지면 온도계는 이러한 온도가 있는 문자열을 표시한다.
+ex) 예: [17, 21, 23]은 "... 17ºC in 1 days ... 21ºC in 2 days ... 23ºC in 3 days ..." 출력
+배열 'arr'을 매개변수로 하고, 위와 같은 문자열을 콘솔에 기록하는 함수 'printForecast' 생성
+문제 해결 프레임워크 사용: 문제를 이해하고 하위 문제로 나누기!
+
+TEST DATA 1: [17, 21, 23]
+TEST DATA 2: [12, 5, -5, 0, 4]
+*/
+
+// 💛 1) Understanding the problem (문제를 이해하기)
+// - Array transformed to string, separated by ...
+// - What is the X days? Answer: index + 1
+
+// 💛 2) Breaking up into sub-problems (문제를 더 작은 하위 문제로 분해하기)
+// - Transform array into string (배열을 문자열로 변환)
+// - Transform each element to string with ºC (배열의 각 요소 뒤에 ºC 출력)
+// - String needs to contain day (days -> index + 1)
+// - Add ... between elements and start and end of string (배열 요소의 시작 및 끝에 ... 추가)
+// - Log string to console
+
+const arr1 = [17, 21, 23];
+const arr2 = [12, 5, -5, 0, 4];
+
+console.log(`... ${arr1[0]}ºC ... ${arr1[1]}ºC ... ${arr2[1]}ºC`);
+
+const printForecast = function (arr) {
+  let str = '';
+  for (let i = 0; i < arr.length; i++) {
+    str += `${arr[i]}ºC in ${i + 1}days ... `;
+  }
+  console.log('... ' + str);
+};
+printForecast(arr1);
+printForecast(arr2);
