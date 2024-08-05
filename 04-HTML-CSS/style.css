@@ -1,11 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: sandybrown;
   font-family: Arial;
   font-size: 20px;
+  padding: 50px;
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 35px;
+  margin-bottom: 25px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+p {
+  margin-bottom: 20px;
 }
 
 .first {
@@ -13,10 +30,32 @@ h1 {
 }
 
 .second {
-  color: rgb(36, 1, 190);
+  color: rgb(146, 46, 0);
 }
 
 #your-name {
   background-color: rgb(250, 207, 114);
   border: 5px solid #444;
+  width: 400px;
+  padding: 25px;
+  margin-top: 20px;
+}
+
+#eunyomi-image {
+  width: 300px;
+}
+
+input,
+button {
+  padding: 5px;
+  font-size: 15px;
+}
+
+a {
+  background-color: rgb(0, 95, 172);
+  color: white;
+}
+
+#your-name h2 {
+  color: rgb(7, 155, 68);
 }
