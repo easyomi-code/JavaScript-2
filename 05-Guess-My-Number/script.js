@@ -16,6 +16,7 @@ console.log(document.querySelector('.guess').value);
 // secretNumber: 1 ~ 20 난수 생성
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
+let highscore = 0;
 
 // EventListener
 document.querySelector('.check').addEventListener('click', function () {
@@ -34,6 +35,11 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('body').style.backgroundColor = '#60b347';
     document.querySelector('.number').style.width = '30rem';
     // document.querySelector('.number').style.color = '#60b347';
+
+    if (score > highscore) {
+      highscore = score;
+      document.querySelector('.highscore').textContent = highscore;
+    }
 
     // Guess Wrong
     // Too High
