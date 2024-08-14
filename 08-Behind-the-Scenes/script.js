@@ -70,7 +70,7 @@ const addExpr = function (a, b) {
 
 var addArrow = (a, b) => a + b;
 
-// Example(호이스팅의 버그)
+// Example(호이스팅으로 인한 예상치 못한 상황)
 console.log(undefined);
 if (!numProducts) deleteShopingCart();
 
