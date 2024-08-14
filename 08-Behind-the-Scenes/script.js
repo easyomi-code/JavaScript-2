@@ -1,5 +1,7 @@
 'use strict';
 
+/*
+// 1. Scoping in Practice
 function calcAge(birthYear) {
   const age = 2024 - birthYear;
 
@@ -39,3 +41,49 @@ const firstName = 'Eunyomi';
 calcAge(1996);
 // console.log(age);
 // printAge();
+*/
+// -----------------------------------------
+
+// 2. Hoisting and TDZ in Practice
+// Variables
+console.log(me);
+// console.log(job);
+// console.log(year);
+
+var me = 'Jonas';
+let job = 'teacher';
+const year = 1999;
+
+// Functions
+console.log(addDecl(2, 3));
+// console.log(addExpr(2, 3));
+console.log(addArrow);
+// console.log(addArrow(2, 3));
+
+function addDecl(a, b) {
+  return a + b;
+}
+
+const addExpr = function (a, b) {
+  return a + b;
+};
+
+var addArrow = (a, b) => a + b;
+
+// Example(호이스팅의 버그)
+console.log(undefined);
+if (!numProducts) deleteShopingCart();
+
+var numProducts = 10;
+
+function deleteShopingCart() {
+  console.log('All products deleted!');
+}
+
+var x = 1;
+let y = 2;
+const z = 3;
+
+console.log(x === window.x);
+console.log(x === window.y);
+console.log(x === window.z);
