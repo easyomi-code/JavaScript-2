@@ -87,7 +87,7 @@ const z = 3;
 console.log(x === window.x);
 console.log(x === window.y);
 console.log(x === window.z);
-*/
+
 // -----------------------------------------
 
 // 3. The this Keyword in Practice
@@ -126,3 +126,52 @@ kangin.calcAge();
 
 const func = eunyomi.calcAge;
 func();
+*/
+// -----------------------------------------
+
+// 4. Regular Functions vs. Arrow Functions
+// var firstName = 'Kangin';
+
+const eunyomi = {
+  firstName: 'Eunyomi',
+  year: 1999,
+  calcAge: function () {
+    // console.log(this);
+    console.log(2024 - this.year);
+
+    // Solution 1(ES6 이전)
+    // const self = this; // self or that
+    // const isMillenial = function () {
+    //   console.log(self);
+    //   console.log(self.year >= 1981 && self.year <= 1996);
+    // };
+
+    // Solution 2(Arrow Function, ES6)
+    const isMillenial = () => {
+      console.log(this);
+      console.log(this.year >= 1981 && this.year <= 1996);
+    };
+    isMillenial();
+  },
+
+  greet: () => {
+    console.log(this);
+    console.log(`저의 이름은 ${this.firstName} 입니다.`);
+  },
+};
+eunyomi.greet();
+eunyomi.calcAge();
+
+// Arguments keyword
+const addExpr = function (a, b) {
+  console.log(arguments);
+  return a + b;
+};
+addExpr(2, 5);
+addExpr(2, 5, 8, 12);
+
+var addArrow = (a, b) => {
+  console.log(arguments);
+  return a + b;
+};
+addArrow(2, 5, 8);
