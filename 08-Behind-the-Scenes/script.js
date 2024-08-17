@@ -126,7 +126,7 @@ kangin.calcAge();
 
 const func = eunyomi.calcAge;
 func();
-*/
+
 // -----------------------------------------
 
 // 4. Regular Functions vs. Arrow Functions
@@ -175,3 +175,25 @@ var addArrow = (a, b) => {
   return a + b;
 };
 addArrow(2, 5, 8);
+*/
+// -----------------------------------------
+
+// 5. Primitives vs. Objects (Primitive vs Reference Types)
+let age = 30;
+let oldAge = age;
+age = 31;
+console.log(age);
+console.log(oldAge);
+
+const me = {
+  name: 'Eunyomi',
+  age: 30,
+};
+
+const friend = me;
+friend.age = 27;
+
+console.log('Me: ', me);
+// {name: 'Eunyomi', age: 27}
+console.log('Friend: ', friend);
+// {name: 'Eunyomi', age: 27}
