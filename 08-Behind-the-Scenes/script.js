@@ -175,7 +175,7 @@ var addArrow = (a, b) => {
   return a + b;
 };
 addArrow(2, 5, 8);
-*/
+
 // -----------------------------------------
 
 // 5. Primitives vs. Objects (Primitive vs Reference Types)
@@ -197,3 +197,58 @@ console.log('Me: ', me);
 // {name: 'Eunyomi', age: 27}
 console.log('Friend: ', friend);
 // {name: 'Eunyomi', age: 27}
+*/
+// -----------------------------------------
+
+// 6. Primitives vs Objects in Practice
+// Primitive types(원시 타입)
+let lastName = 'Kate';
+let oldLastName = lastName;
+lastName = 'Eunyomi';
+console.log(lastName, oldLastName);
+
+// Reference types(참조 타입)
+const jessi = {
+  firstName: 'Jessi',
+  lastName: 'King',
+  age: 28,
+};
+
+// marriedJessi: 스택에 있는 또 다른 변수, 새로운 객체 X
+const marriedJessi = jessi;
+marriedJessi.lastName = 'Queen';
+console.log('변경 전: ', jessi);
+console.log('변경 후: ', marriedJessi);
+// Jessi, marriedJessi: 힙(Heap)에서 같은 메모리 주소를 가리킴
+// 콜 스택(Call Stack)에서 같은 메모리 주소 레퍼런스를 갖고 있기 때문
+// marriedJessi = {};
+
+// Copying objects
+console.log('---------- Copying objects ----------');
+const jessi2 = {
+  firstName: 'Jessi',
+  lastName: 'King',
+  age: 28,
+};
+
+const jessiCopy = Object.assign({}, jessi2);
+jessiCopy.lastName = 'Queen';
+console.log('변경 전: ', jessi2);
+console.log('변경 후: ', jessiCopy);
+
+console.log('--------------------------------------');
+const yomi = {
+  firstName: 'Yomi',
+  lastName: 'King',
+  age: 29,
+  family: ['Jin', 'V'],
+};
+
+const yomiCopy = Object.assign({}, yomi);
+yomiCopy.lastName = 'Queen';
+
+yomiCopy.family.push('RM');
+yomiCopy.family.push('Jimin');
+
+console.log('변경 전: ', yomi);
+console.log('변경 후: ', yomiCopy);
