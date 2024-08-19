@@ -18,7 +18,7 @@ const [[, rating], [, ratingsCount]] = ratings;
 // 1.4
 const ratingStars = [63405, 1808];
 const [fiveStarRatings, oneStarRatings, threeStarRatings = 0] = ratingStars;
-*/
+
 // -----------------------------------------
 
 // 2. Destructuring Objects
@@ -72,3 +72,15 @@ printBookInfo({
 });
 
 printBookInfo({ title: 'Algorithms', author: 'Robert Sedgewick' });
+*/
+// -----------------------------------------
+
+// 3. The Spread Operator (...)
+// 3.1
+const bookAuthors = [...books[0].author, ...books[1].author];
+
+// 3.2
+function spellWord(word) {
+  console.log(...word);
+}
+spellWord('JavaScript');
