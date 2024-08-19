@@ -35,6 +35,10 @@ const restaurant = {
       `주문 완료! ${this.starterMenu[starterIndex]} 그리고 ${this.mainMenu[mainIndex]}는 ${time}분에 ${address}로 배달될 예정입니다.😊 `
     );
   },
+
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(`${ing1}, ${ing2}, ${ing3}을(를) 넣은 파스타 나왔습니다!😋`);
+  },
 };
 
 /*
@@ -79,7 +83,7 @@ console.log(i, j, k);
 // Default values
 const [p = 1, q = 1, r = 1] = [8, 9];
 console.log(p, q, r);
-*/
+
 // -----------------------------------------
 
 // 2. Destructuring Objects
@@ -130,3 +134,65 @@ restaurant.orderDelivery({
   address: 'ABC Hotel, 302',
   starterIndex: 0,
 });
+*/
+// -----------------------------------------
+
+// 3. The Spread Operator (...)
+// Spread 연산자 -> 배열에서 모든 값을 가져온다.(배열에서 요소를 얻는다)
+const arr = [7, 8, 9];
+const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+console.log(badNewArr);
+
+const newArr = [1, 2, ...arr];
+console.log(newArr);
+
+console.log(...newArr);
+console.log(1, 2, 7, 8, 9);
+
+console.log(restaurant.mainMenu);
+const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+console.log(newMenu);
+
+// Spread 연산자는 배열에서 모든 요소를 취하고 새 변수를 생성하지 않는다.
+// 쉼표로 구분된 값을 쓸 수 있는 곳에서만 사용할 수 있다.
+
+// Copy array
+const mainMenuCopy = [...restaurant.mainMenu];
+
+// Join 2 arrays
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+console.log(menu);
+
+// Iterables: arrays, strings, maps, sets, NOT objects
+const str = 'Eunyomi';
+const letters = [...str, ' ', 'S.'];
+console.log(letters);
+console.log(...str);
+// console.log(`${...str} Hello!`);
+
+// Real-world example
+const ingredients = [
+  // prompt('파스타를 만들어 보자! 넣을 재료 (1)?'),
+  // prompt('파스타를 만들어 보자! 넣을 재료 (2)?'),
+  // prompt('파스타를 만들어 보자! 넣을 재료 (3)?'),
+];
+console.log(ingredients);
+
+// restaurant.orderPasta(ingredients[0], ingredients[1], ingredients[2]);
+restaurant.orderPasta(...ingredients);
+
+// Objects
+// console.log(restaurant);
+// console.log({ ...restaurant });
+const newRestaurant = { foundedIn: 1998, ...restaurant, founder: 'Giuseppe' };
+console.log(newRestaurant);
+
+// const restaurantCopy = restaurant;
+// restaurantCopy.name = 'Ristorante Roma';
+// console.log('변경 전: ', restaurant.name); // Ristorante Roma
+// console.log('변경 후: ', restaurantCopy.name); // Ristorante Roma
+
+const restaurantCopy = { ...restaurant };
+restaurantCopy.name = 'Ristorante Roma';
+console.log('변경 전: ', restaurant.name); // Classico Italiano
+console.log('변경 후: ', restaurantCopy.name); // Ristorante Roma
