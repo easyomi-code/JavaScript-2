@@ -201,7 +201,7 @@ const restaurantCopy = { ...restaurant };
 restaurantCopy.name = 'Ristorante Roma';
 console.log('변경 전: ', restaurant.name); // Classico Italiano
 console.log('변경 후: ', restaurantCopy.name); // Ristorante Roma
-*/
+
 // -----------------------------------------
 
 // 4. Rest Pattern and Parameters
@@ -244,3 +244,39 @@ add(...x);
 
 restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
 restaurant.orderPizza('mushrooms');
+*/
+// -----------------------------------------
+
+// 5. Short Circuiting (&& and ||)
+// Use any data type (어떤 데이터 타입도 사용 가능하다.)
+// Return any data type (어떤 데이터 타입이든 반환할 수 있다.)
+// Short Circuiting 작업을 한다 -> true인 값이 존재하면 그 값을 즉시 반환
+console.log('----------- OR(||) -----------');
+console.log(3 || 'Eunyomi'); // Not Boolean
+console.log('' || 'Eunyomi');
+console.log(true || 0);
+console.log(undefined || null);
+
+console.log(undefined || 0 || '' || 'Hello' || 23 || null);
+
+restaurant.numGuests = 0;
+console.log(`restaurant.numGuests = ${restaurant.numGuests}`);
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log(guests1);
+
+const guests2 = restaurant.numGuests || 10;
+console.log(guests2);
+
+console.log('----------- AND(&&) -----------');
+console.log(0 && 'Eunyomi');
+console.log(7 && 'Eunyomi');
+
+console.log('Hello' && 25 && null && 'Eunyomi');
+console.log('Hello' && undefined && null && 'Eunyomi');
+
+// Practical example
+if (restaurant.orderPizza) {
+  restaurant.orderPizza('mushrooms', 'spinach');
+}
+
+restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
