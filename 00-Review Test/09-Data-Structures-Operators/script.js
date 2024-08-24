@@ -84,7 +84,7 @@ function spellWord(word) {
   console.log(...word);
 }
 spellWord('JavaScript');
-*/
+
 // -----------------------------------------
 
 // 4. Rest Pattern and Parameters
@@ -99,3 +99,62 @@ function printBookAuthorsCount(title, ...authors) {
   console.log(`The book "${title}" has ${authors.length} authors`);
 }
 printBookAuthorsCount('Algorithms', 'Robert Sedgewick', 'Kevin Wayne');
+*/
+// -----------------------------------------
+
+// 5. Short Circuiting (&& and ||)
+// 5.1
+// book 객체, 속성 programmingLanguage
+const books1 = [
+  {
+    title: 'Algorithms',
+    author: ['Robert Sedgewick', 'Kevin Wayne'],
+    programmingLanguage: 'Java',
+  },
+
+  {
+    title: 'Algorithms',
+    author: ['Robert Sedgewick', 'Kevin Wayne'],
+    programmingLanguage: 'JavaScript',
+  },
+];
+
+// 책 객체에 'programmingLanguage' 속성이 있고, 그 값이 'Java'인지 확인
+// function hasExamplesInJava(book) {
+//   if (book.programmingLanguage === 'Java') {
+//     return true;
+//   } else {
+//     return 'no data available';
+//   }
+// }
+
+function hasExamplesInJava(book) {
+  return book.programmingLanguage === 'Java' || 'no data available';
+}
+
+console.log(hasExamplesInJava(books1[0]));
+console.log(hasExamplesInJava(books1[1]));
+
+// 5.2
+const books2 = [
+  {
+    title: 'Island of Blue Dolphins',
+    onlineContent: false,
+  },
+
+  {
+    title: 'Operating System Concepts',
+    onlineContent: true,
+  },
+];
+
+// for (let i = 0; i < books2.length; i++) {
+//   if (books2[i].onlineContent) {
+//     console.log(`"${books2[i].title}" provides online content.`);
+//   }
+// }
+
+for (let i = 0; i < books2.length; i++) {
+  books2[i].onlineContent &&
+    console.log(`"${books2[i].title}" provides online content.`);
+}
