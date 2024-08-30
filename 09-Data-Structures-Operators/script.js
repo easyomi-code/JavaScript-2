@@ -244,7 +244,7 @@ add(...x);
 
 restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
 restaurant.orderPizza('mushrooms');
-*/
+
 // -----------------------------------------
 
 // 5. Short Circuiting (&& and ||)
@@ -280,3 +280,15 @@ if (restaurant.orderPizza) {
 }
 
 restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
+*/
+// -----------------------------------------
+
+// 6. The Nullish Coalescing Operator (??)
+restaurant.numGuests = 0;
+const guests = restaurant.numGuests || 10;
+console.log(guests);
+
+// Nullish(ES2020): null and undefined (NOT 0 or '')
+// 변수의 값이 null 또는 undefined 인지를 판단하여 다른 값을 반환하는 데 사용
+const guestCorrect = restaurant.numGuests ?? 10;
+console.log(guestCorrect);
