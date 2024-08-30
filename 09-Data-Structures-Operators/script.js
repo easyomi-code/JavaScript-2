@@ -280,7 +280,7 @@ if (restaurant.orderPizza) {
 }
 
 restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
-*/
+
 // -----------------------------------------
 
 // 6. The Nullish Coalescing Operator (??)
@@ -292,3 +292,37 @@ console.log(guests);
 // 변수의 값이 null 또는 undefined 인지를 판단하여 다른 값을 반환하는 데 사용
 const guestCorrect = restaurant.numGuests ?? 10;
 console.log(guestCorrect);
+*/
+// -----------------------------------------
+
+// 7. Logical Assignment Operators
+const rest1 = {
+  name: 'Capri',
+  // numGuests: 20,
+  numGuests: 0,
+};
+
+const rest2 = {
+  name: 'La Piazza',
+  owner: 'Giovanni Rossi',
+};
+
+// OR(||) assignment operator
+// rest1.numGuests = rest1.numGuests || 10; // 20
+// rest2.numGuests = rest2.numGuests || 10; // 10
+// rest1.numGuests ||= 10;
+// rest2.numGuests ||= 10;
+
+// nullish(??) assignment operator (null or undefined)
+rest1.numGuests ??= 10;
+rest2.numGuests ??= 10;
+
+// AND(&&) assignment operator
+// rest1.owner = rest1.owner && '<ANONYMOUS>';
+// rest2.owner = rest2.owner && '<ANONYMOUS>';
+// rest1.owner가 falsy(undefined)이므로 아무 일도 일어나지 않는다.
+rest1.owner &&= '<ANONYMOUS>';
+rest2.owner &&= '<ANONYMOUS>';
+
+console.log(rest1);
+console.log(rest2);
