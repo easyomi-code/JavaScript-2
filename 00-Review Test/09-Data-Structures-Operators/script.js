@@ -99,7 +99,7 @@ function printBookAuthorsCount(title, ...authors) {
   console.log(`The book "${title}" has ${authors.length} authors`);
 }
 printBookAuthorsCount('Algorithms', 'Robert Sedgewick', 'Kevin Wayne');
-*/
+
 // -----------------------------------------
 
 // 5. Short Circuiting (&& and ||)
@@ -157,4 +157,27 @@ const books2 = [
 for (let i = 0; i < books2.length; i++) {
   books2[i].onlineContent &&
     console.log(`"${books2[i].title}" provides online content.`);
+}
+*/
+// -----------------------------------------
+
+// 6. The Nullish Coalescing Operator (??)
+// 6.1
+// books array에 onlineContent 존재 X
+const books = [
+  {
+    title: 'Island of Blue Dolphins',
+    onlineContent: true,
+  },
+
+  {
+    title: 'Operating System Concepts',
+  },
+];
+
+for (let i = 0; i < books.length; i++) {
+  books[i].onlineContent ??
+    console.log(
+      `"${books[i].title}" provides no data about its online content.`
+    );
 }
