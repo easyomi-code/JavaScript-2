@@ -158,7 +158,7 @@ for (let i = 0; i < books2.length; i++) {
   books2[i].onlineContent &&
     console.log(`"${books2[i].title}" provides online content.`);
 }
-*/
+
 // -----------------------------------------
 
 // 6. The Nullish Coalescing Operator (??)
@@ -180,4 +180,18 @@ for (let i = 0; i < books.length; i++) {
     console.log(
       `"${books[i].title}" provides no data about its online content.`
     );
+}
+*/
+// -----------------------------------------
+
+// 7. Logical Assignment Operators
+// 7.1
+for (let i = 0; i < books.length; i++) {
+  // books[i].edition ??= 1; -> null 또는 undefined 일 때만
+  books[i].edition ||= 1;
+}
+
+// 7.2
+for (let i = 0; i < books.length; i++) {
+  books[i].highlighted &&= !(books[i].thirdParty.goodreads.rating < 4.2);
 }
