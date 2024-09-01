@@ -185,6 +185,22 @@ for (let i = 0; i < books.length; i++) {
 // -----------------------------------------
 
 // 7. Logical Assignment Operators
+const books = [
+  {
+    title: 'Island of Blue Dolphins',
+    onlineContent: false,
+    highlighted: true,
+    thirdParty_goodreads_rating: 4.5,
+  },
+
+  {
+    title: 'Operating System Concepts',
+    onlineContent: true,
+    highlighted: true,
+    thirdParty_goodreads_rating: 4.0,
+  },
+];
+
 // 7.1
 for (let i = 0; i < books.length; i++) {
   // books[i].edition ??= 1; -> null 또는 undefined 일 때만
@@ -192,6 +208,8 @@ for (let i = 0; i < books.length; i++) {
 }
 
 // 7.2
+// books[i].highlighted = books[i].highlighted && !(books[i].thirdParty.goodreads.rating < 4.2)
 for (let i = 0; i < books.length; i++) {
-  books[i].highlighted &&= !(books[i].thirdParty.goodreads.rating < 4.2);
+  books[i].highlighted &&= !(books[i].thirdParty_goodreads_rating < 4.2);
+  console.log(books[i].highlighted);
 }
