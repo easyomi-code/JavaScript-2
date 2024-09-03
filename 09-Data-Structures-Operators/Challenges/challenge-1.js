@@ -57,3 +57,60 @@ const game = {
     team2: 6.5,
   },
 };
+
+// 1.
+console.log('----------------- # 1 -------------------');
+const [players1, players2] = game.players;
+console.log(players1, players2);
+
+// 2.
+console.log('----------------- # 2 -------------------');
+const [gk, ...fieldPlayers] = players1;
+console.log(gk, fieldPlayers);
+
+// 3.
+console.log('----------------- # 3 -------------------');
+const allPlayers = [...players1, ...players2];
+console.log(allPlayers);
+
+// 4.
+console.log('----------------- # 4 -------------------');
+const player1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
+console.log(player1Final);
+
+// 5.
+console.log('----------------- # 5 -------------------');
+// const team1 = game.odds.team1;
+// const draw = game.odds.x;
+// const team2 = game.odds.team2;
+// console.log(team1, draw, team2);
+
+const {
+  odds: { team1, x: draw, team2 },
+} = game;
+console.log(team1, draw, team2);
+
+// 6.
+console.log('----------------- # 6 -------------------');
+// TEST DATA FOR 6: Use players 'Davies', 'Muller', 'Lewandowski' and 'Kimmich'. Then, call the function again with players from game.scored
+// score: '4:0'
+// scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels']
+const printGoals = function (...players) {
+  console.log(players);
+  console.log(`${players.length} goals were scored`);
+};
+// printGoals('Davies', 'Muller', 'Lewandowski', 'Kimmich');
+// printGoals('Sonny', 'KangIn');
+printGoals(...game.scored);
+
+// 7.
+console.log('----------------- # 7 -------------------');
+// odds: {
+//   team1: 1.33,
+//   x: 3.25,
+//   team2: 6.5,
+// },
+
+// 더 낮은 배당률(odd)을 가진 팀이 승리할 가능성이 더 높다
+team1 < team2 && console.log('team1이 승리할 가능성이 더 높습니다!');
+team1 > team2 && console.log('team2가 승리할 가능성이 더 높습니다!');
