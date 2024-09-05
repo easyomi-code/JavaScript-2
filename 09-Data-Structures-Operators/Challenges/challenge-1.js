@@ -58,6 +58,7 @@ const game = {
   },
 };
 
+/*
 // 1.
 console.log('----------------- # 1 -------------------');
 const [players1, players2] = game.players;
@@ -114,3 +115,51 @@ console.log('----------------- # 7 -------------------');
 // 더 낮은 배당률(odd)을 가진 팀이 승리할 가능성이 더 높다
 team1 < team2 && console.log('team1이 승리할 가능성이 더 높습니다!');
 team1 > team2 && console.log('team2가 승리할 가능성이 더 높습니다!');
+*/
+
+// ------------ # Challenge-1(solution) # --------------
+// 1.
+console.log('----------------- # 1 -------------------');
+const [players1, players2] = game.players;
+console.log(players1, players2);
+
+// 2.
+console.log('----------------- # 2 -------------------');
+const [gk, ...fieldPlayers] = players1;
+// console.log(gk, ...fieldPlayers); // 값
+console.log(gk, fieldPlayers); // 배열
+
+// 3.
+console.log('----------------- # 3 -------------------');
+const allPlayers = [...players1, ...players2];
+console.log(allPlayers);
+
+// 4.
+console.log('----------------- # 4 -------------------');
+const player1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
+console.log(player1Final);
+
+// 5.
+console.log('----------------- # 5 -------------------');
+// console.log(game.odds);
+// const { odds } = game;
+// console.log(odds);
+const {
+  odds: { team1, x: draw, team2 },
+} = game;
+console.log(team1, draw, team2);
+
+// 6.
+console.log('----------------- # 6 -------------------');
+const printGoals = function (...players) {
+  console.log(`${players.length} goals were scored`);
+};
+
+printGoals('Davies', 'Muller', 'Lewandowski', 'Kimmich');
+printGoals('Davies', 'Muller');
+printGoals(...game.scored);
+
+// 7.
+console.log('----------------- # 7 -------------------');
+team1 < team2 && console.log('team1이 이길 확률이 높습니다.');
+team1 > team2 && console.log('team2가 이길 확률이 높습니다.');
