@@ -292,7 +292,7 @@ console.log(guests);
 // 변수의 값이 null 또는 undefined 인지를 판단하여 다른 값을 반환하는 데 사용
 const guestCorrect = restaurant.numGuests ?? 10;
 console.log(guestCorrect);
-*/
+
 // -----------------------------------------
 
 // 7. Logical Assignment Operators
@@ -326,3 +326,30 @@ rest2.owner &&= '<ANONYMOUS>';
 
 console.log(rest1);
 console.log(rest2);
+*/
+
+// ------------ # Challenge-1 # --------------
+
+// 8. Looping Arrays: The for-of Loop
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+
+// for (let i = 0; i < menu.length; i++) {
+//   console.log(menu[i]);
+// }
+
+for (const item of menu) console.log(item);
+console.log('----------------------------');
+
+// entries(): 배열의 각 요소에 대한 인덱스와 값을 쌍으로 반환하는 이터레이터를 생성
+// [0, 'Focaccia'], [1, 'Bruschetta'], ... , [6, 'Risotto']
+for (const item of menu.entries()) {
+  // console.log(item);
+  console.log(`${item[0] + 1}: ${item[1]}`);
+}
+console.log('----------------------------');
+
+for (const [i, el] of menu.entries()) {
+  console.log(`${i + 1}: ${el}`);
+}
+
+// console.log([...menu.entries()]);
