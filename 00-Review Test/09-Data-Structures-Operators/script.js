@@ -181,7 +181,7 @@ for (let i = 0; i < books.length; i++) {
       `"${books[i].title}" provides no data about its online content.`
     );
 }
-*/
+
 // -----------------------------------------
 
 // 7. Logical Assignment Operators
@@ -212,4 +212,48 @@ for (let i = 0; i < books.length; i++) {
 for (let i = 0; i < books.length; i++) {
   books[i].highlighted &&= !(books[i].thirdParty_goodreads_rating < 4.2);
   console.log(books[i].highlighted);
+}
+*/
+// -----------------------------------------
+
+// 8. Looping Arrays: The for-of Loop
+// 8.1
+let pageSum = 0;
+
+for (let book of books) {
+  pageSum += book.pages;
+}
+
+// 8.2
+const books = [
+  { title: 'Book 1', author: 'Author A' },
+  { title: 'Book 2', author: ['Author B', 'Author C'] },
+];
+
+const addAuthors = [];
+
+for (const book of books) {
+  // string(문자열) -> single author
+  if (typeof book.author === 'string') {
+    addAuthors.push(book.author);
+    // array(배열) -> multiple authors
+  } else {
+    for (const author of book.author) {
+      addAuthors.push(author);
+    }
+  }
+}
+
+console.log(addAuthors);
+
+// 8.3
+const allAuthors = [
+  'Robert Sedgewick',
+  'Kevin Wayne',
+  'Harold Abelson',
+  'Cal Newport',
+];
+
+for (const [index, author] of allAuthors.entries()) {
+  console.log(`${index + 1}. ${author}`);
 }
