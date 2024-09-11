@@ -213,7 +213,7 @@ for (let i = 0; i < books.length; i++) {
   books[i].highlighted &&= !(books[i].thirdParty_goodreads_rating < 4.2);
   console.log(books[i].highlighted);
 }
-*/
+
 // -----------------------------------------
 
 // 8. Looping Arrays: The for-of Loop
@@ -257,3 +257,31 @@ const allAuthors = [
 for (const [index, author] of allAuthors.entries()) {
   console.log(`${index + 1}. ${author}`);
 }
+*/
+// -----------------------------------------
+
+// 9. Enhanced Object Literals
+// 9.1
+const bookData = [
+  ['title', 'Computer Networking: A Top-Down Approach'],
+  ['author', ['James F. Kurose', 'Keith W. Ross']],
+  ['publisher', 'Addison Wesley'],
+];
+
+// Do the rest
+const newBook = {
+  [bookData[0][0]]: bookData[0][1],
+  // ...(Here)
+  [bookData[1][0]]: bookData[1][1],
+  [bookData[2][0]]: bookData[2][1],
+};
+
+// 9.2
+const pages = 880;
+
+const newBook2 = {
+  title: 'The C Programming Language',
+  author: ['Brian W. Kernighan', 'Dennis M. Ritchie'],
+  // ...(Here)
+  pages,
+};
