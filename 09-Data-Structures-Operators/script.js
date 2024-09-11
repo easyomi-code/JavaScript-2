@@ -356,7 +356,7 @@ for (const [i, el] of menu.entries()) {
 }
 
 // console.log([...menu.entries()]);
-*/
+
 // -----------------------------------------
 
 // 9. Enhanced Object Literals
@@ -404,3 +404,42 @@ console.log(users[2]?.name ?? 'NOT Exist');
 
 if (users.length > 0) console.log(users[1]?.name);
 else console.log('NOT Exist');
+*/
+// -----------------------------------------
+
+// 11. Looping Objects: Object Keys, Values, and Entries
+// for (const day of Object.keys(openingHours)) {
+//   console.log(day);
+// }
+
+// Property NAMES
+const properties = Object.keys(openingHours);
+console.log(properties);
+
+let openStr = `We are open on ${properties.length} days: `;
+
+for (const day of properties) {
+  openStr += `${day}, `;
+}
+console.log(openStr);
+
+// Property VALUES
+const values = Object.values(openingHours);
+console.log(values);
+
+// Entire object
+const entries = Object.entries(openingHours);
+// console.log(entries);
+
+for (const x of entries) {
+  console.log(x);
+}
+
+// for (const [index, el] of entries) {
+//   console.log(`On ${index} -> (open: ${el.open}, close: ${el.close})`);
+// }
+
+// [key, value]
+for (const [day, { open, close }] of entries) {
+  console.log(`On ${day} -> (open: ${open}, close: ${close})`);
+}
