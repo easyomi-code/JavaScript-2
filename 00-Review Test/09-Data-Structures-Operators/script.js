@@ -257,7 +257,7 @@ const allAuthors = [
 for (const [index, author] of allAuthors.entries()) {
   console.log(`${index + 1}. ${author}`);
 }
-*/
+
 // -----------------------------------------
 
 // 9. Enhanced Object Literals
@@ -285,3 +285,26 @@ const newBook2 = {
   // ...(Here)
   pages,
 };
+*/
+// -----------------------------------------
+
+// 10. Optional Chaining (?.)
+const book = [
+  {
+    title: 'Book 1',
+    keywords: ['computer science', 'technology', 'programming'],
+  },
+];
+
+const newBook2 = {
+  title: 'The C Programming Language',
+  author: ['Brian W. Kernighan', 'Dennis M. Ritchie'],
+};
+
+// 10.1
+function getFirstKeyword(book) {
+  console.log(book.keywords?.[0]);
+}
+
+getFirstKeyword(book[0]); // computer science
+getFirstKeyword(newBook2); // undefined
