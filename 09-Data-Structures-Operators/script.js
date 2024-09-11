@@ -360,3 +360,47 @@ for (const [i, el] of menu.entries()) {
 // -----------------------------------------
 
 // 9. Enhanced Object Literals
+
+// 10. Optional Chaining (?.)
+// if (restaurant.openingHours.fri) console.log(restaurant.openingHours.fri.open);
+if (restaurant.openingHours && restaurant.openingHours.mon)
+  console.log(restaurant.openingHours.mon.open);
+
+// WITH optional chaining(error)
+// console.log(restaurant.openingHours.mon.open);
+
+// WITH optional chaining
+console.log(restaurant.openingHours.mon?.open);
+console.log(restaurant.openingHours?.mon?.open);
+
+// Example
+const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+// for (let i = 0; i < days.length; i++) {
+//   console.log(days[i]);
+// }
+for (const day of days) {
+  // console.log(day);
+  const open = restaurant.openingHours[day]?.open ?? 'closed';
+  console.log(`On ${day}, we open at ${open}`);
+}
+
+// Methods
+console.log(restaurant.order(0, 1)); // order 메서드가 반드시 존재해야함
+console.log(restaurant.order?.(0, 1)); // order 메서드가 존재하는 경우에만 호출
+
+// console.log(restaurant.ordering(0, 1)); // error
+// console.log(restaurant.ordering?.(0, 1)); // undefined
+console.log(restaurant.ordering?.(0, 1) ?? 'Method does not exist');
+console.log(restaurant.order?.(0, 1) ?? 'Method does not exist');
+
+// Arrays
+const users = [
+  { name: 'Eunyomi', email: 'hello@eunyomi.io' },
+  { name: 'Wonpil', email: 'hello@wonpil.io' },
+];
+
+console.log(users[0]?.name);
+console.log(users[2]?.name ?? 'NOT Exist');
+
+if (users.length > 0) console.log(users[1]?.name);
+else console.log('NOT Exist');
